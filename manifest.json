@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Sender",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "cookies",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1/*",
+    "http://10.10.15.17:8080/*"
+  ]
+}

